@@ -69,6 +69,8 @@ Run hardhat node by running:
 npx hardhat node
 ```
 
+To deploy the contract to the local hardhat node, run the following command:
+
 ```bash
 npx hardhat ignition deploy ignition/modules/Lock.ts
 ```
