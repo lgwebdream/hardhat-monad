@@ -6,7 +6,15 @@ import "dotenv/config";
 const PRIVATE_KEY = process.env.PRIVATE_KEY || "";
 
 const config: HardhatUserConfig = {
-  solidity: "0.8.28",
+  solidity: {
+    version: "0.8.28",
+    settings: {
+      metadata: {
+        bytecodeHash: "none", // disable ipfs
+        useLiteralContent: true, // use source code
+      },
+    },
+  },
   networks: {
     monadTestnet: {
       url: "https://testnet-rpc.monad.xyz",
