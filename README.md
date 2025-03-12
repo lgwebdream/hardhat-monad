@@ -4,7 +4,8 @@ This project demonstrates a basic Hardhat use case optimized for Monad. It comes
 
 ## Project Structure
 
-```
+``` AladdinAGI
+
 hardhat-monad/
 ├── contracts/             # Smart contract source files
 │   └── Lock.sol           # Sample time-locked wallet contract
@@ -28,25 +29,30 @@ hardhat-monad/
 ### Installation
 
 1. Clone this repository:
+
    ```bash
    git clone https://github.com/portdeveloper/hardhat-monad.git
    cd hardhat-monad
    ```
 
 2. Install dependencies:
+
    ```bash
    npm install
    ```
 
 3. Create a `.env` file based on `.env.example`:
+
    ```bash
    cp .env.example .env
    ```
 
 4. Add your private key to the `.env` file:
+
    ```
    PRIVATE_KEY=your_private_key_here
    ```
+
    ⚠️ **IMPORTANT**: Never commit your `.env` file or expose your private key.
 
 ## Testing
@@ -106,6 +112,7 @@ Once verified, you can view your contract on the [Monad Explorer](https://testne
 ## Customizing the Lock Contract
 
 The sample Lock contract is a simple time-locked wallet that:
+
 - Accepts ETH during deployment
 - Locks funds until a specified timestamp
 - Allows only the owner to withdraw once the time has passed
@@ -121,4 +128,3 @@ You can modify the unlock time in `ignition/modules/Lock.ts` or pass it as a par
 ## License
 
 This project is licensed under the MIT License.
-
